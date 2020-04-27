@@ -1,4 +1,5 @@
-Django == 1.11.*
-django-mysql == 2.2.*
-mysqlclient == 1.3.*
-requests == 2.18.*
+Django == 1.*
+django-mysql == 3.*
+django-debug-toolbar == 2.*
+mysqlclient == 1.*
+requests == 2.*
