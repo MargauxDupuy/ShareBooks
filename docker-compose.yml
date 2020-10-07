@@ -10,6 +10,14 @@ services:
        MYSQL_USER: 'sb'
        MYSQL_PASSWORD: 'shareB00KS'
        MYSQL_ROOT_PASSWORD: 'root'
+  node:
+    image: node:14
+    working_dir: /code/store/static/store/
+    environment:
+      - PATH=/code/store/static/store/:$PATH
+    volumes:
+      - ./store/static/store/:/code/store/static/store/
+    tty: true
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8990
@@ -19,3 +27,5 @@ services:
       - "8990:8990"
     depends_on:
       - db
+#      - node
+# Nice to have command for migrate

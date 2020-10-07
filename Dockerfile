@@ -4,4 +4,7 @@ RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt
+
+ADD store/static/store/ /code/static/store/
+
 ADD . /code/
